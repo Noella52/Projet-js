@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Projet javascript</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">HUNTER</a>
+        <input type="checkbox" name="" id="nav-toggler" class="nav-toggler">
+        <label for="nav-toggler" class="nav-toggler-label"><div class="toggler-icon burger" ></div></label>
+        <nav>
+            <div id="underline"></div>
+            <ul class="navbar">
+                <li class="nav-item"><a id="item1" href="#titre1" class="nav-link active">Circuit</a></li>
+                <li class="nav-item"><a id="item2" href="#titre2" class="nav-link">Equation</a></li>
+                <li class="nav-item"><a id="item3" href="#titre3" class="nav-link">Crammaire</a></li>
+                <li class="nav-item"><a id="item4" href="#titre4" class="nav-link">Publicité</a></li>
+                <li class="nav-item"><a id="item5" href="#footer" class="nav-link">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- titre -->
+    <div id="titre1">
+        <div class="separateur2"></div>
+        <div><br><br></div>
+        <div class="ligne "></div>
+        <p class="titre">CIRCUIT ELECTRIQUE</p>
+        <div class="ligne "></div>
+        <div><br><br></div>
+    </div>
+
+    <!-- circuit -->
+    <div class="container">
+    <div class="row">
+
+        <div class="row-box image-box">
+            <img src="image/circuit.png" alt="" class="image">
+        </div>
+
+        <div class="row-box form-box">
+            <p class="titre-int"> Circuit electrique</p> 
+            <div class="ptligne"></div>
+            <div><br><br></div>
+
+            <form>
+            <div class="row-form">
+                <div class="form-items">
+                    <label class="label" for="R1">R1</label>
+                    <input placeholder="Entrez R1 ... "class="input-box circuit" type="number" id="R1">
+                </div>
+                <div class="form-items">
+                    <label class="label" for="R2">R2</label>
+                    <input placeholder="Entrez R2 ... "class="input-box circuit" type="number" id="R2">
+                </div>
+                <div class="form-items">
+                    <label class="label" for="R3">R3</label>
+                    <input placeholder="Entrez R3 ... "class="input-box circuit" type="number" id="R3">
+                </div>
+                <div class="form-items">
+                    <label class="label" for="R4">R4</label>
+                    <input placeholder="Entrez R4 ... "class="input-box circuit" type="number" id="R4">
+                </div>
+                <div class="form-items">
+                    <label class="label" for="U">U</label>
+                    <input placeholder="Entrez U ... "class="input-box circuit" type="number" id="U">
+                </div>
+            </div>
+            </form>
+            <div><br></div>
+            <div class="btn-box">
+                <button class="bttn-form" onclick="solution()" >Calculer</button>
+                <button class="bttn-form" style="margin-left: 10px;" onclick="refresh()" >Restorer</button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="ligne-box" ><div class="ligne2"></div></div>
+
+    <!-- titre -->
+    <div id="titre2">
+        <div class="separateur2"></div>
+        <div><br><br></div>
+        <div class="ligne "></div>
+        <p class="titre">EQUATION DU SECOND DEGRER</p>
+        <div class="ligne "></div>
+        <div><br><br></div>
+    </div>
+
+    <!-- equation du second degrer -->
+    <div class="container">
+    <div class="row">
+
+        <div class="row-box image-box">
+            <img src="image/equation.png" alt="" class="image">
+        </div>
+
+        <div class="row-box form-box">
+
+            <p class="titre-int">Eqution du second degrer</p> 
+            <div class="ptligne"></div>
+            <div><br><br></div>
+
+            <form>
+            <div class="row-form">
+                <div class="form-items">
+                    <label class="label" for="a">a</label>
+                    <input placeholder="Entrez a ... "class="input-box eq" type="number" id="a">
+                </div>
+                <div class="form-items">
+                    <label class="label" for=" b"> b</label>
+                    <input placeholder="Entrez  b ... "class="input-box eq" type="number" id="b">
+                </div>
+                <div class="form-items">
+                    <label class="label" for=" c"> c</label>
+                    <input placeholder="Entrez  c ... "class="input-box eq" type="number" id="c">
+                </div>
+            </div>
+            </form>
+            <div><br></div>
+            <div class="btn-box">
+                <button class="bttn-form"  onclick="solution2()">Calculer</button>
+                <button class="bttn-form" style="margin-left: 10px;" onclick="refresh()" >Restorer</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="ligne-box" ><div class="ligne2"></div></div>
+
+    <!-- titre -->
+    <div id="titre3">
+        <div class="separateur2"></div>
+        <div><br><br></div>
+        <div class="ligne "></div>
+        <p class="titre">CALCUL MATRICIEL</p>
+        <div class="ligne "></div>
+        <div><br><br></div>
+    </div>
+
+    <!-- crammaire -->
+    <div class="container">
+    <div class="row">
+
+        <div class="row-box image-box">
+            <img src="image/crammaire.png" alt="" class="image">
+        </div>
+
+        <div class="row-box form-box">
+
+            <p class="titre-int">Crammaire</p> 
+            <div class="ptligne"></div>
+            <div><br><br></div>
+
+            <div class="testcr">
+                <div>
+                    <p class="cr-label">x1</p>
+                    <input type="number" class="cr-input" placeholder="x1 ..." id="x1" >
+                </div>
+                <div>
+                    <p class="cr-label">x2</p>
+                    <input type="number" class="cr-input" placeholder="x2 ..." id="x2">
+                </div>
+                <div>
+                    <p class="cr-label">x3</p>
+                    <input type="number" class="cr-input" placeholder="x3 ..." id="x3">
+                </div>
+                <div>
+                    <p class="cr-label">x4</p>
+                    <input type="number" class="cr-input" placeholder="x4 ..." id="x4">
+                </div>
+            </div>
+
+            
+            <div class="testcr">
+                <div>
+                    <p class="cr-label">x5</p>
+                    <input type="number" class="cr-input" placeholder="x5 ..." id="x5" >
+                </div>
+                <div>
+                    <p class="cr-label">x6</p>
+                    <input type="number" class="cr-input" placeholder="x6 ..." id="x6">
+                </div>
+                <div>
+                    <p class="cr-label">x7</p>
+                    <input type="number" class="cr-input" placeholder="x7 ..." id="x7">
+                </div>
+                <div>
+                    <p class="cr-label">x8</p>
+                    <input type="number" class="cr-input" placeholder="x8 ..." id="x8">
+                </div>
+            </div>
+
+            
+            <div class="testcr">
+                <div>
+                    <p class="cr-label">x9</p>
+                    <input type="number" class="cr-input" placeholder="x9 ..." id="x9" >
+                </div>
+                <div>
+                    <p class="cr-label">x10</p>
+                    <input type="number" class="cr-input" placeholder="x10 ..." id="x10">
+                </div>
+                <div>
+                    <p class="cr-label">x11</p>
+                    <input type="number" class="cr-input" placeholder="x11 ..." id="x11">
+                </div>
+                <div>
+                    <p class="cr-label">x12</p>
+                    <input type="number" class="cr-input" placeholder="x12 ..." id="x12">
+                </div>
+            </div>
+
+            <div><br></div>
+            <div class="btn-box">
+                <button class="bttn-form"  onclick="solution3()">Calculer</button>
+                <button class="bttn-form" style="margin-left: 10px;" onclick="refresh()" >Restorer</button>
+            </div>    
+        
+        </div>
+
+    </div>
+    </div>
+
+    <div class="ligne-box" ><div class="ligne2"></div></div>
+
+    <!-- titre -->
+    <div id="titre4">
+        <div class="separateur2"></div>
+        <div><br><br></div>
+        <div class="ligne "></div>
+        <p class="titre">PANNEAU PUBLICITAIRE</p>
+        <div class="ligne "></div>
+        <div><br><br></div>
+    </div>
+
+    <div id="popup">
+        <div id="spn"></div>
+        <h5  id="poptitre" class="text-light"></h5>
+        <div id="popup-ligne"></div>
+        <div id="popup-text"></div>
+        <a onclick="retour()" id="popbtn" >Quitter</a> 
+        <div><br><br></div>
+   </div>
+
+   <div class="pub"><img src="" alt="" name="diapo" class="diapo-img"></div>
+
+   <div class="separation"></div>
+   <div class="separateur2"></div>
+
+    <footer id="footer" >
+    <div class="row">
+
+        <div class="footer-items">
+            <h4 class="ft-titre">Membres</h4>
+            <div class="ligneft"></div>
+            <ul>
+                <li>Andoniaina</li>
+                <li>Julio</li>
+                <li>Chrisanthe</li>
+                <li>Sylvain</li>
+            </ul>
+        </div>
+
+        <div class="footer-items">
+            <h4 class="ft-titre">Numeros</h4>
+            <div class="ligneft"></div>
+            <ul>
+                <li>+261 34 86 004 83</li>
+                <li>+261 34 71 778 29</li>
+                <li>+261 34 47 267 40</li>
+                <li>+261 34 12 705 61</li>
+            </ul>
+        </div>
+
+        <div class="footer-items">
+            <h4 class="ft-titre">Emails</h4>
+            <div class="ligneft"></div>
+            <ul>
+                <li>andoniainadi@gmail.com</li>
+                <li>andoniainadi@gmail.com</li>
+                <li>andoniainadi@gmail.com</li>
+                <li>andoniainadi@gmail.com</li>
+            </ul>
+        </div>
+
+        <div class="footer-items">
+            <h4 class="ft-titre">Reseaux</h4>
+            <div class="ligneft"></div>
+        </div>
+    </div>
+
+    </footer>
+
+    <script src="script.js" ></script>
+</body>
+</html>
